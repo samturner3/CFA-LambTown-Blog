@@ -1,24 +1,8 @@
 # README
+This is another project to demonstrate creating a blog using rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+First we used trello to create some user stories.
 
-Things you may want to cover:
+### Trello Board
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Trello Board](https://github.com/samturner3/CFA-LambTown-Blog/blob/master/docs/YoungLambs%20User%20Stories%20Board.png?raw=true)

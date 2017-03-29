@@ -3,7 +3,8 @@
     <div class="navbar-header">
       <!-- <a class="navbar-brand">LambTown</a> -->
       <!-- <img class="navbar-left" alt="Logo" src="/assets/LambLogoTextHorz.png" style="height: 50px" /> -->
-      <%=link_to image_tag("/assets/LambLogoTextHorz.png"), root_path, class: "navbar-left logo-img"%>
+      <%=link_to cl_image_tag("LambLogoTextHorz_jro4vz.png"), root_path, class: "navbar-left logo-img"%>
+
     </div>
     <ul class="nav navbar-nav">
       <li class="<%= 'active' if params[:controller] == 'pages' %>"><%= link_to "Home", root_path %></li>

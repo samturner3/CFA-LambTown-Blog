@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dturasbjb
+  api_key: '936383383699799'
+  api_secret: A0X5r7aD1gTUJVB7Mu7cs7HRa1g
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dturasbjb
+  api_key: '936383383699799'
+  api_secret: A0X5r7aD1gTUJVB7Mu7cs7HRa1g
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dturasbjb
+  api_key: '936383383699799'
+  api_secret: A0X5r7aD1gTUJVB7Mu7cs7HRa1g
+  enhance_image_tag: true
+  static_image_support: false

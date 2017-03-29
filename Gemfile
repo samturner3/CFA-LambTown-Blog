@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 gem 'simple_form'
-
+  gem 'cloudinary', '~> 1.6'
 gem 'friendly_id', '~> 5.1.0' # Note: You MUST use 5.0.0 or greater for Rails 4.0+
 gem 'devise'
 # gem "bulma-rails", "~> 0.4.0"
@@ -43,6 +43,7 @@ gem 'jbuilder', '~> 2.5'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+
 end
 
 group :development do

@@ -11,6 +11,7 @@
   <body>
     <%= render 'layouts/nav' %>
     <div class="container">
+    <%= render partial: 'layouts/notice', flash: flash %>
     <%= yield %>
     </div>
   </body>

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :own_post, only: [:edit, :update, :destroy]
   before_action :authenticate_user!
 
   # GET /posts
@@ -25,6 +26,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+
   end
 
   # POST /posts
@@ -78,4 +80,13 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :content, :user_id)
     end
+
+    def own_post
+     unless current_user == @post.user
+    #  flash[:alert] = "You cannot edit this item."
+    #  format.html { redirect_to root_path, notice: 'You Cannot Edit This Item' }
+    flash[:warning] = "You Cannot Edit This Item"
+    redirect_to root_path
+    end
+  end
 end

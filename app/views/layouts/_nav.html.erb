@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <!-- <a class="navbar-brand">LambTown</a> -->
+      <!-- <img class="navbar-left" alt="Logo" src="/assets/LambLogoTextHorz.png" style="height: 50px" /> -->
+      <%=link_to image_tag("/assets/LambLogoTextHorz.png"), root_path, class: "navbar-left logo-img"%>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="<%= 'active' if params[:controller] == 'pages' %>"><%= link_to "Home", root_path %></li>
+      <li class="<%= 'active' if params[:controller] == 'posts' %>"><%= link_to 'Posts', posts_path %></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= render 'layouts/login_items' %></li>
+      <li><%= render 'layouts/registration_items' %></li>
+    </ul>
+  </div>
+</nav>

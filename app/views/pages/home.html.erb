@@ -1,4 +1,18 @@
 <h1>Welcome to Lamb Town</h1>
 <p>We are proud young lambs</p>
 
-<%= link_to 'Posts', posts_path %>
+<p><%= link_to 'View Posts', posts_path %></p>
+
+<% if user_signed_in? %>
+  <p><%= link_to("Logout", destroy_user_session_path, :method => :delete) %></p>
+<% else %>
+  <p><%= link_to('Login', new_user_session_path)  %></p>
+<% end %>
+<% if user_signed_in? %>
+  <p><%= link_to('Edit registration', edit_user_registration_path) %></p>
+<% else %>
+  <p><%= link_to('Register', new_user_registration_path)  %></p>
+<% end %>
+
+
+<img src="/assets/LambTownLogo.png" alt="">

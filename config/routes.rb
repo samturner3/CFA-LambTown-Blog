@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
-  resources :posts
+
+  get 'contact', to:'contact#index'
+
+  post 'contact', to:'contact#mail'
+
+  resources :posts do
+    resources :comments
+  end
+
+
   devise_for :users
   root 'pages#home'
 

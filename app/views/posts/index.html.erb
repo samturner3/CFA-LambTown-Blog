@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Posts</h1>
-
-<table>
+<div class="panel panel-default">
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
@@ -17,15 +17,22 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.content %></td>
-        <td><%= post.user %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= post.user.email %></td>
+
+        <td><%= link_to 'Show', post, class: "btn btn-default" %></td>
+        <%if post.user == current_user%>
+        <td><%= link_to 'Edit', edit_post_path(post), class: "btn btn-default" %></td>
+        <td><%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
+        <%else%>
+        <td></td>
+        <td></td>
+        <%end%>
+
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path, class: "btn btn-default" %>
